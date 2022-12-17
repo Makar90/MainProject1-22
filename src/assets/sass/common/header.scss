@@ -1,0 +1,113 @@
+.header {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 37px;
+        padding-bottom: 36px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    /* &__menu-hum-icon {
+    } */
+
+    &__menu-hum-label {
+        display: none;
+
+        @media (max-width: $tablet) {
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
+    }
+
+    &__menu-hum-input {
+        display: none;
+
+        &:checked~.header__menu-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: fixed;
+            background-color: $color-ham-menu-background;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 99;
+        }
+    }
+
+    &__menu-row {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__menu-item {
+
+        &--active {
+            width: 163px;
+            height: 46px;
+            background: $color-main-menu-active-pos-background;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 4px;
+            margin-right: 4px;
+
+            /* individual font */
+            font-family: $monserat;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 60px;
+            /* identical to box height, or 375% */
+            //text-align: center;
+            letter-spacing: -0.05em;
+            color: $color-white;
+        }
+    }
+
+    &__menu-item-link {
+        /* individual font */
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height, or 117% */
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__icon-menu-row {
+        display: flex;
+        align-items: flex-end;
+        gap: 46px;
+        align-self: flex-end;
+    }
+
+    &__icon-menu-item-icon-serch {
+        &:hover {
+            color: $color-hover-search-ico;
+        }
+    }
+}
+
+.bascket-icon {
+    &:hover .bascket-icon__hands {
+        color: $color-hover-bag-hands-ico;
+    }
+
+    &:hover .bascket-icon__body {
+        color: $color-hover-bag-body-ico;
+    }
+}

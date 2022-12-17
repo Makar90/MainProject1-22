@@ -1,0 +1,49 @@
+/*body {
+    font-family: $sub-fonts;
+    font-weight: 400;
+}
+*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: $color-wrapper-background;
+    min-width: $wrapper-width-min;
+}
+
+.container {
+    max-width: $conteiner-width-max;
+    margin: 0 auto;
+    padding: 0px 24px;
+    position: relative;
+}
+
+.link {
+    display: block;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-hover-links-buttons-icons-thumbs;
+        transform: scale(1.2);
+    }
+
+    &--icon {
+        &:hover {
+            cursor: pointer;
+            color: $color-hover-links-buttons-icons-thumbs;
+        }
+    }
+}
+
+.button-hover {
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-black;
+        background-color: $color-hover-links-buttons-icons-thumbs;
+        transform: scale(1.05);
+    }
+}
